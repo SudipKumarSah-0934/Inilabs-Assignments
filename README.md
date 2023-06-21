@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 ## Features
-Search with your username
+### Search with your username
 Toggle between dark and light mode
 View your followers, following and repositories
 Sort your repo list with date pushed, name, stars and forks.
