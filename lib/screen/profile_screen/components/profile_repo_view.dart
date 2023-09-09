@@ -140,7 +140,7 @@ class _ProfileRepoViewState extends State<ProfileRepoView> {
                 top: widget.showProfile ? 0 : 0,
                 bottom: 0,
                 left: 16,
-                right: 16,
+                right: 5,
               ),
               child:
             Row(
@@ -153,7 +153,7 @@ class _ProfileRepoViewState extends State<ProfileRepoView> {
                     fontSize: 20,
                   ),
                 ),
-                const SizedBox(width: 10),
+                const SizedBox(width: 8),
                 DropdownButton<String>(
                   value: selectedFilter,
                   onChanged: (value) {

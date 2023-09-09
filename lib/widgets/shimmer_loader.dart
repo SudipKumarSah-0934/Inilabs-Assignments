@@ -99,9 +99,9 @@ class ShimmerUserProfile extends StatelessWidget {
             const SizedBox(
               height: 80,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 ShimmerCard(
                   radius: 10,
                   height: 50,
@@ -148,8 +148,8 @@ class ShimmerRepoCard extends StatelessWidget {
                 height: 15,
                 width: ResponsiveSize.sizeWidth(context) * 0.3,
               ),
-              Row(
-                children: const [
+              const Row(
+                children: [
                   ShimmerCard(
                     radius: 10,
                     height: 30,
@@ -189,8 +189,8 @@ class ShimmerRepoCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: const [
+              const Row(
+                children: [
                   ShimmerCard(
                     radius: 5,
                     height: 20,

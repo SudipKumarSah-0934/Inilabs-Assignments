@@ -99,15 +99,16 @@ class RepoCard extends StatelessWidget {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
+                    flex: 3,
                     child: Row(
                       children: [
                         repository.language == ""
                             ? Container()
                             : Padding(
-                                padding: const EdgeInsets.only(
-                                    right: 0, top: 8, bottom: 8),
+                                padding: const EdgeInsets.only(top: 8, bottom: 8),
                                 child: Text(
                                   repository.language.toString(),
                                   style: const TextStyle(
@@ -148,39 +149,30 @@ class RepoCard extends StatelessWidget {
                                 "/profile/${Provider.of<GithubBloc>(context, listen: false).currentUserName}/${repository.repoName}/forks_users",
                                 replace: false);
                           },
-                          child: Padding(
-                            padding: const EdgeInsets.all(6.0),
-                            child: Row(
-                              children: [
-                                Image.asset(AppImages.ic_fork,
-                                    height: 20,
-                                    width: 20,
-                                    color: Theme.of(context).iconTheme.color),
-                                const SizedBox(width: 3),
-                                Text(
-                                  repository.forks.toString(),
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 12),
-                                ),
-                              ],
-                            ),
+                          child: Row(
+                            children: [
+                              Image.asset(AppImages.ic_fork,
+                                  height: 20,
+                                  width: 20,
+                                  color: Theme.of(context).iconTheme.color),
+                              const SizedBox(width: 3),
+                              Text(
+                                repository.forks.toString(),
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 12),
+                              ),
+                            ],
                           ),
                         ),
                       ],
                     ),
                   ),
                   Flexible(
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 8),
-                        child: Text(
-                          "Last Pushed: ${AppDateUtils.formatDate(repository.lastPushed.toString())}",
-                          style: const TextStyle(
-                              fontWeight: FontWeight.w600, fontSize: 10),
-                        ),
-                      ),
+                    child: Text(
+                      "Last Pushed: ${AppDateUtils.formatDate(repository.lastPushed.toString())}",
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w600, fontSize: 10),
                     ),
                   ),
                 ],
